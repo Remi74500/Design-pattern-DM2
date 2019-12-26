@@ -1,0 +1,9 @@
+@startuml Proxy
+
+
+class Schtroumpf {
+    saluer(animal:Animal)
+}
+class Animal
+
+@enduml
