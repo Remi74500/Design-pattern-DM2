@@ -8,9 +8,17 @@ public class VillageTest {
 
     @Test
     public void testEntre() {
-        Schtroumpf schtroumpfDeGarde = new Schtroumpf();
+        Schtroumpf schtroumpfDeGarde = new SchtroumpfDouanier();
         Animal pingouin = new Animal("pingouin");
         //
         assertEquals("Bonjour pingouin", schtroumpfDeGarde.saluer(pingouin));
+    }
+
+    @Test
+    public void testEntrePas() {
+        Schtroumpf schtroumpfDeGarde = new SchtroumpfDouanier();
+        Animal ours = new AnimalDangereux("ours");
+        //
+        assertEquals("Au revoir ours", schtroumpfDeGarde.saluer(ours));
     }
 }

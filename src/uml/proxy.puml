@@ -4,6 +4,16 @@ class Schtroumpf {
     saluer(animal: Animal): String
 }
 
-class Animal
+class SchtroumpfDouanier
+
+Schtroumpf<|--SchtroumpfDouanier
+
+class Animal {
+    - name: String
+}
+
+class AnimalDangereux
+
+Animal<|--AnimalDangereux
 
 @enduml
