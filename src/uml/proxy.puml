@@ -2,8 +2,9 @@
 
 
 class Schtroumpf {
-    saluer(animal:Animal)
+    saluer(animal: Animal): String
 }
+
 class Animal
 
 @enduml
