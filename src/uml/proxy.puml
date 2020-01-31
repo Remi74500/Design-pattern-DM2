@@ -1,6 +1,5 @@
 @startuml Proxy
 
-
 class Schtroumpf {
     saluer(animal: Animal): String
 }
