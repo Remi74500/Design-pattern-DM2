@@ -1,0 +1,33 @@
+@startuml ServerWeb
+interface IAfficher {
+     + Afficher() :String   
+}
+class Header{
+     - myHeader: HashMap<String,String>
+}
+class Body{
+     - content: String
+}
+class URL{
+     - path: String 
+}
+class RequetteHttp {
+    - requeteParts: List<IAfficher>
+    - fullrequete: String
+    + ajouter(IAfficher) :void
+}
+
+class ServerWeb{
+    - ServerWeb : monServer
+    + getInstance() :void
+    + reponse(RequetteHttp) :int
+}
+
+RequetteHttp "1" *-- "many" IAfficher : contains
+
+IAfficher <|-- URL
+IAfficher <|-- RequetteHttp
+IAfficher <|-- Body
+IAfficher <|-- Header
+
+@enduml ServerWeb
